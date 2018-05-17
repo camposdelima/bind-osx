@@ -17,7 +17,8 @@ head -n 6 /etc/rndc.conf > /etc/rndc.key
 # Set up a basic named.conf file.
 # You may need to replace 9.10.0-P2 with the current version number if it is out of date.
 
-cat > /usr/local/Cellar/bind/9.10.0-P1/etc/named.conf  <<END
+cd /usr/local/Cellar/bind/*/etc
+cat > named.conf <<END
 //
 // Include keys file
 //
