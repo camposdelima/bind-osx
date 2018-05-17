@@ -15,7 +15,6 @@
 head -n 6 /etc/rndc.conf > /etc/rndc.key
 
 # Set up a basic named.conf file.
-# You may need to replace 9.10.0-P2 with the current version number if it is out of date.
 
 cd /usr/local/Cellar/bind/*/etc
 cat > named.conf <<END
@@ -83,7 +82,7 @@ logging {
 END
 
 # Symlink Homebrew's named.conf to the typical /etc/ location. 
-ln -s /usr/local/Cellar/bind/9.10.0-P1/etc/named.conf /etc/named.conf 
+ln -s /usr/local/Cellar/bind/*/etc/named.conf /etc/named.conf 
 
 
 # Create directory that bind expects to store zone files
